@@ -63,7 +63,10 @@ const Navbar = () => {
           </li>
         )}
         <button
-          onClick={() => (window.location.href = "http://localhost:5173")}
+          onClick={() =>
+            (window.location.href =
+              "https://webtechnologieprojectadmin.netlify.app/")
+          }
           className="px-4 font-xs py-2 border border-gray-300 rounded-full"
         >
           Admin Panel
