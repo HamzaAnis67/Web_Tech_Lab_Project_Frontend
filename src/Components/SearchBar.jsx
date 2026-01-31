@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from 'react';
-import { ShopContext } from '../context/ShopContext';
-import { assets } from '../assets/assets';
-import { useLocation } from 'react-router-dom';
+import { useContext, useEffect, useState } from "react";
+import { ShopContext } from "../Context/ShopContext";
+import { assets } from "../assets/assets";
+import { useLocation } from "react-router-dom";
 
 const SearchBar = () => {
   // Extract context values related to search and visibility from ShopContext
@@ -10,7 +10,7 @@ const SearchBar = () => {
 
   // Local state to control visibility and animation of the search bar
   const [visible, setVisible] = useState(showSearch);
-  const [animate, setAnimate] = useState('');
+  const [animate, setAnimate] = useState("");
 
   // Get current URL path
   const location = useLocation();
@@ -18,11 +18,11 @@ const SearchBar = () => {
   // Effect to update the search bar visibility and animation based on URL path and showSearch
 
   useEffect(() => {
-    if (location.pathname.includes('collection')) {
+    if (location.pathname.includes("collection")) {
       // Show the search bar and apply the scale-up animation if it includes 'collection' page
 
       setVisible(true);
-      setAnimate('animate-scale-up-center');
+      setAnimate("animate-scale-up-center");
     } else {
       // Hide the search bar if doesn`t includes 'collection' page
       setVisible(false);
@@ -30,7 +30,7 @@ const SearchBar = () => {
   }, [location, showSearch]); // Update visibility when location and showSearch change
 
   const handleClose = () => {
-    setAnimate('animate-scale-down-center');
+    setAnimate("animate-scale-down-center");
     setTimeout(() => setShowSearch(false), 400); // Hide the search bar after a delay to match the duration of the scale-down animation
   };
 
