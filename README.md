@@ -4,7 +4,7 @@ Welcome to **Forever **, an eCommerce platform offering a wide selection of prod
 
 ## 🌐 Live Website
 
-You can visit the live website here: [Forever ](https://forever-ecom.netlify.app/)
+You can visit the live website here: [Forever ](https://webtechnologieproject.netlify.app/)
 
 ## 📋 Features
 
